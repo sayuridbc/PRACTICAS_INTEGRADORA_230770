@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Arquitectura inicial de la aplicación móvil",
+    "quality_profile": "showcase",
+    "views": [
+      { "id": "solicitud-principal", "label": "Solicitud principal", "focus": ["mobile", "keycloak", "api", "postgres", "mongo"], "note": "Autenticación, llamada autenticada y persistencia principal." },
+      { "id": "mapas", "label": "Folletos y mapas", "focus": ["mobile", "api", "maps"], "note": "Consulta de contenido geográfico mediante la API." },
+      { "id": "desarrollo", "label": "Desarrollo e infraestructura", "focus": ["docker", "compose", "git", "github", "api", "postgres", "mongo"], "note": "Entorno local reproducible y control de código fuente." }
+    ]
+  },
+  "components": [
+    { "id": "mobile", "type": "frontend", "label": "Aplicación móvil", "sublabel": "Flutter · cliente móvil", "tag": "Límite del dispositivo", "pos": [45, 310], "size": [160, 68] },
+    { "id": "keycloak", "type": "security", "label": "Keycloak", "sublabel": "OAuth 2.0 / OpenID Connect", "tag": "Límite de identidad", "pos": [285, 125], "size": [175, 70] },
+    { "id": "api", "type": "backend", "label": "API REST", "sublabel": "FastAPI · recursos de negocio", "tag": "Límite de servicio", "pos": [540, 310], "size": [180, 68], "brand": "FastAPI" },
+    { "id": "postgres", "type": "database", "label": "PostgreSQL", "sublabel": "Datos relacionales", "pos": [810, 240], "size": [160, 66], "brand": "PostgreSQL" },
+    { "id": "mongo", "type": "database", "label": "MongoDB", "sublabel": "Datos documentales", "pos": [810, 390], "size": [160, 66], "brand": "MongoDB" },
+    { "id": "maps", "type": "external", "label": "Servicio de folletos / mapas", "sublabel": "Contenido y geodatos externos", "tag": "Tercero", "pos": [810, 85], "size": [185, 70] },
+    { "id": "docker", "type": "cloud", "label": "Docker", "sublabel": "Contenedores de desarrollo", "pos": [285, 565], "size": [150, 62], "brand": "Docker" },
+    { "id": "compose", "type": "cloud", "label": "Docker Compose", "sublabel": "Orquestación local", "pos": [540, 565], "size": [180, 62], "brand": "Docker" },
+    { "id": "git", "type": "external", "label": "Git", "sublabel": "Control de versiones local", "pos": [45, 700], "size": [145, 62] },
+    { "id": "github", "type": "external", "label": "GitHub", "sublabel": "Repositorio remoto", "pos": [285, 700], "size": [150, 62], "brand": "GitHub" }
+  ],
+  "boundaries": [
+    { "kind": "security-group", "label": "Zona de aplicación confiable", "wraps": ["api", "postgres", "mongo"], "pad": 32 },
+    { "kind": "region", "label": "Entorno local de desarrollo", "wraps": ["docker", "compose"], "pad": 30 }
+  ],
+  "connections": [
+    { "id": "mobile-auth", "from": "mobile", "to": "keycloak", "label": "OIDC + PKCE", "variant": "security", "fromSide": "top", "toSide": "left" },
+    { "id": "mobile-api", "from": "mobile", "to": "api", "label": "HTTPS / REST + Bearer JWT", "variant": "emphasis" },
+    { "id": "api-keycloak", "from": "api", "to": "keycloak", "label": "Validación de tokens", "variant": "security", "fromSide": "top", "toSide": "right" },
+    { "id": "api-postgres", "from": "api", "to": "postgres", "label": "SQL", "fromSide": "right", "toSide": "left", "labelDy": 22 },
+    { "id": "api-mongo", "from": "api", "to": "mongo", "label": "Consultas documentales", "fromSide": "right", "toSide": "left", "labelAt": [765, 470] },
+    { "id": "api-maps", "from": "api", "to": "maps", "label": "HTTPS / API externa", "variant": "dashed", "fromSide": "top", "toSide": "left", "labelDy": -28 },
+    { "id": "docker-compose", "from": "docker", "to": "compose", "label": "Motor de contenedores", "variant": "dashed", "labelDy": 55 },
+    { "id": "git-github", "from": "git", "to": "github", "label": "push / pull", "variant": "dashed" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Flujo principal", "items": ["Flutter inicia sesión con Keycloak mediante OIDC + PKCE.", "La app llama a FastAPI por HTTPS con un Bearer JWT.", "FastAPI persiste según el tipo de dato en PostgreSQL o MongoDB."] },
+    { "dot": "rose", "title": "Límites de confianza", "items": ["El dispositivo móvil, Keycloak y el servicio de mapas están fuera de la zona de aplicación.", "La API es el único punto de acceso a las bases de datos.", "Los tokens se validan antes de atender recursos protegidos."] },
+    { "dot": "emerald", "title": "Desarrollo", "items": ["Docker Compose orquesta API y almacenes para trabajo local.", "Git conserva el historial local y GitHub centraliza la colaboración remota."] }
+  ]
+}
