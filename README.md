@@ -1,7 +1,7 @@
 ## PRACTICAS DE LA ASIGNATURA DE INTEGRADORA
 ## MTI- MARCO A. RAMÍREZ H.
 
-| Práctica | Descripción |
+| PRACTICAS | Descripción |
 |---------|-------------|
-| **PRACTICA 02** | https://sayuridbc.github.io/PRACTICAS_INTEGRADORA_230770/ |
+| **Práctica 02** | https://sayuridbc.github.io/PRACTICAS_INTEGRADORA_230770/ |
 
