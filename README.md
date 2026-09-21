@@ -2,5 +2,6 @@
 ## MTI- MARCO A. RAMÍREZ H.
 
 | PRACTICA | Descripción |
+|---------|-------------|
 | **PRACTICA 02** | https://sayuridbc.github.io/PRACTICAS_INTEGRADORA_230770/ |
 
