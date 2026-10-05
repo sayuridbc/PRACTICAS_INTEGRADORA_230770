@@ -2,7 +2,9 @@
 
 ## Acceso al modelo
 
-Consulta la [versión interactiva publicada en GitHub Pages](https://sayuridbc.github.io/PRACTICAS_INTEGRADORA_230770/). También puedes abrir el [sitio desde este repositorio](index.html).
+🔗 **GitHub Pages:** [Abrir el Modelo Canvas de Netflix](https://sayuridbc.github.io/PRACTICAS_INTEGRADORA_230770/)
+
+También puedes abrir el [sitio desde este repositorio](index.html).
 
 ## Propósito
 
