@@ -2,7 +2,7 @@
 
 ## Acceso al modelo
 
-Consulta la [versión interactiva publicada en GitHub Pages](https://sayuridbc.github.io/PRACTICAS_INTEGRADORA_230770/PRACTICA_03/docs/). También puedes abrir el [sitio desde este repositorio](index.html).
+Consulta la [versión interactiva publicada en GitHub Pages](https://sayuridbc.github.io/PRACTICAS_INTEGRADORA_230770/). También puedes abrir el [sitio desde este repositorio](index.html).
 
 ## Propósito
 
