@@ -6,7 +6,7 @@
 
 ---
 
-![Diagrama del sistema](diagrama.jpeg)
+![Diagrama del sistema](XicoBajoLaNiebla.png)
 
 ##  Descripción
 
