@@ -1,0 +1,2829 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "standard",
+  "startedAt": "2026-10-10T15:54:30.366Z",
+  "specification": {
+    "path": "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.workflow.json",
+    "sha256": "248a8d1ee4516e1093e587b6a639947087fdb7d4c721307eba29fdef4f9dcfab",
+    "bytes": 42228
+  },
+  "artifact": {
+    "path": "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.html",
+    "sha256": "10be8bf067ab2ebb8e8c908e8102559d270fc4720cdb7a597de5596805cf65ef",
+    "bytes": 794919
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "C:\\nvm4w\\nodejs\\node.exe",
+        "C:\\Users\\sayur\\.agents\\skills\\archify\\bin\\archify.mjs",
+        "deliver",
+        "workflow",
+        "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.workflow.json",
+        "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.html",
+        "--quality",
+        "standard",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "248a8d1ee4516e1093e587b6a639947087fdb7d4c721307eba29fdef4f9dcfab",
+          "bytes": 42228
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "standard",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 10,
+          "compositionIssues": [
+            {
+              "severity": "warning",
+              "code": "composition/proper-crossing",
+              "relationship": {
+                "id": "home-search",
+                "from": "home",
+                "to": "search",
+                "label": "Buscar título",
+                "collectionIndex": 7,
+                "artifactIndex": 8
+              },
+              "otherRelationship": {
+                "id": "resume-title",
+                "from": "home",
+                "to": "continue",
+                "label": "Continuar viendo",
+                "collectionIndex": 16,
+                "artifactIndex": 17
+              },
+              "point": [
+                151,
+                762
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/proper-crossing",
+              "relationship": {
+                "id": "invalid-form",
+                "from": "create",
+                "to": "formerror",
+                "label": "Faltan campos requeridos",
+                "collectionIndex": 8,
+                "artifactIndex": 9
+              },
+              "otherRelationship": {
+                "id": "wrong-role",
+                "from": "role",
+                "to": "denied",
+                "label": "Rol sin autorización",
+                "collectionIndex": 25,
+                "artifactIndex": 26
+              },
+              "point": [
+                856.2,
+                1270
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "invalid-form",
+                "from": "create",
+                "to": "formerror",
+                "label": "Faltan campos requeridos",
+                "collectionIndex": 8,
+                "artifactIndex": 9
+              },
+              "otherRelationship": {
+                "id": "save-edit",
+                "from": "edit",
+                "to": "publish",
+                "label": "Guardar edición",
+                "collectionIndex": 20,
+                "artifactIndex": 21
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1,
+              "overlapLength": 46,
+              "from": [
+                856.2,
+                1142
+              ],
+              "to": [
+                856.2,
+                1188
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "manage-account",
+                "from": "home",
+                "to": "account",
+                "label": "Ver cuenta y plan",
+                "collectionIndex": 9,
+                "artifactIndex": 10
+              },
+              "otherRelationship": {
+                "id": "open-list-title",
+                "from": "mylist",
+                "to": "detail",
+                "label": "Abrir título guardado",
+                "collectionIndex": 12,
+                "artifactIndex": 13
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 3,
+              "overlapLength": 604.8,
+              "from": [
+                765.2,
+                714
+              ],
+              "to": [
+                1370,
+                714
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "manage-account",
+                "from": "home",
+                "to": "account",
+                "label": "Ver cuenta y plan",
+                "collectionIndex": 9,
+                "artifactIndex": 10
+              },
+              "otherRelationship": {
+                "id": "search-detail",
+                "from": "search",
+                "to": "detail",
+                "label": "Abrir resultado",
+                "collectionIndex": 21,
+                "artifactIndex": 22
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 3,
+              "overlapLength": 592.8,
+              "from": [
+                777.2,
+                714
+              ],
+              "to": [
+                1370,
+                714
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "open-list-title",
+                "from": "mylist",
+                "to": "detail",
+                "label": "Abrir título guardado",
+                "collectionIndex": 12,
+                "artifactIndex": 13
+              },
+              "otherRelationship": {
+                "id": "search-detail",
+                "from": "search",
+                "to": "detail",
+                "label": "Abrir resultado",
+                "collectionIndex": 21,
+                "artifactIndex": 22
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1,
+              "overlapLength": 604.8,
+              "from": [
+                765.2,
+                804
+              ],
+              "to": [
+                1370,
+                804
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "resume-title",
+                "from": "home",
+                "to": "continue",
+                "label": "Continuar viendo",
+                "collectionIndex": 16,
+                "artifactIndex": 17
+              },
+              "otherRelationship": {
+                "id": "role-admin",
+                "from": "role",
+                "to": "dashboard",
+                "label": "Permiso: administrador conceptual",
+                "collectionIndex": 17,
+                "artifactIndex": 18
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1,
+              "overlapLength": 90,
+              "from": [
+                36,
+                672
+              ],
+              "to": [
+                36,
+                762
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "resume-title",
+                "from": "home",
+                "to": "continue",
+                "label": "Continuar viendo",
+                "collectionIndex": 16,
+                "artifactIndex": 17
+              },
+              "otherRelationship": {
+                "id": "wrong-role",
+                "from": "role",
+                "to": "denied",
+                "label": "Rol sin autorización",
+                "collectionIndex": 25,
+                "artifactIndex": 26
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 2,
+              "overlapLength": 90,
+              "from": [
+                36,
+                672
+              ],
+              "to": [
+                36,
+                762
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "role-admin",
+                "from": "role",
+                "to": "dashboard",
+                "label": "Permiso: administrador conceptual",
+                "collectionIndex": 17,
+                "artifactIndex": 18
+              },
+              "otherRelationship": {
+                "id": "wrong-role",
+                "from": "role",
+                "to": "denied",
+                "label": "Rol sin autorización",
+                "collectionIndex": 25,
+                "artifactIndex": 26
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 2,
+              "overlapLength": 586,
+              "from": [
+                36,
+                424
+              ],
+              "to": [
+                36,
+                1010
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/desktop-readability",
+              "nodeId": "login",
+              "owner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "viewportWidth": 1440,
+              "viewportHeight": 900,
+              "availableDiagramWidth": 930,
+              "budgetBasis": "legacy-930",
+              "readerContract": "declared-wide-v1",
+              "requestedTargetPx": null,
+              "requestedTargetMet": null,
+              "budgetLimit": "legacy",
+              "viewBoxWidth": 1542,
+              "scale": 0.603112840466926,
+              "text": "Correo y contraseña",
+              "detail": "context",
+              "sourceFontPx": 8,
+              "projectedFontPx": 4.824902723735408,
+              "minimumProjectedFontPx": 6
+            }
+          ]
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 11551,
+      "command": [
+        "C:\\nvm4w\\nodejs\\node.exe",
+        "C:\\Users\\sayur\\.agents\\skills\\archify\\bin\\archify.mjs",
+        "deliver",
+        "workflow",
+        "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.workflow.json",
+        "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.html",
+        "--quality",
+        "standard",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "4ab3af0b-1f66-4934-bd52-c7dfe4e99409",
+        "ok": true,
+        "command": "deliver",
+        "type": "workflow",
+        "input": "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.workflow.json",
+        "output": "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.html",
+        "specification": {
+          "sha256": "248a8d1ee4516e1093e587b6a639947087fdb7d4c721307eba29fdef4f9dcfab",
+          "bytes": 42228
+        },
+        "artifact": {
+          "sha256": "10be8bf067ab2ebb8e8c908e8102559d270fc4720cdb7a597de5596805cf65ef",
+          "bytes": 794919
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "standard",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 10,
+          "compositionIssues": [
+            {
+              "severity": "warning",
+              "code": "composition/proper-crossing",
+              "relationship": {
+                "id": "home-search",
+                "from": "home",
+                "to": "search",
+                "label": "Buscar título",
+                "collectionIndex": 7,
+                "artifactIndex": 8
+              },
+              "otherRelationship": {
+                "id": "resume-title",
+                "from": "home",
+                "to": "continue",
+                "label": "Continuar viendo",
+                "collectionIndex": 16,
+                "artifactIndex": 17
+              },
+              "point": [
+                151,
+                762
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/proper-crossing",
+              "relationship": {
+                "id": "invalid-form",
+                "from": "create",
+                "to": "formerror",
+                "label": "Faltan campos requeridos",
+                "collectionIndex": 8,
+                "artifactIndex": 9
+              },
+              "otherRelationship": {
+                "id": "wrong-role",
+                "from": "role",
+                "to": "denied",
+                "label": "Rol sin autorización",
+                "collectionIndex": 25,
+                "artifactIndex": 26
+              },
+              "point": [
+                856.2,
+                1270
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "invalid-form",
+                "from": "create",
+                "to": "formerror",
+                "label": "Faltan campos requeridos",
+                "collectionIndex": 8,
+                "artifactIndex": 9
+              },
+              "otherRelationship": {
+                "id": "save-edit",
+                "from": "edit",
+                "to": "publish",
+                "label": "Guardar edición",
+                "collectionIndex": 20,
+                "artifactIndex": 21
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1,
+              "overlapLength": 46,
+              "from": [
+                856.2,
+                1142
+              ],
+              "to": [
+                856.2,
+                1188
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "manage-account",
+                "from": "home",
+                "to": "account",
+                "label": "Ver cuenta y plan",
+                "collectionIndex": 9,
+                "artifactIndex": 10
+              },
+              "otherRelationship": {
+                "id": "open-list-title",
+                "from": "mylist",
+                "to": "detail",
+                "label": "Abrir título guardado",
+                "collectionIndex": 12,
+                "artifactIndex": 13
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 3,
+              "overlapLength": 604.8,
+              "from": [
+                765.2,
+                714
+              ],
+              "to": [
+                1370,
+                714
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "manage-account",
+                "from": "home",
+                "to": "account",
+                "label": "Ver cuenta y plan",
+                "collectionIndex": 9,
+                "artifactIndex": 10
+              },
+              "otherRelationship": {
+                "id": "search-detail",
+                "from": "search",
+                "to": "detail",
+                "label": "Abrir resultado",
+                "collectionIndex": 21,
+                "artifactIndex": 22
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 3,
+              "overlapLength": 592.8,
+              "from": [
+                777.2,
+                714
+              ],
+              "to": [
+                1370,
+                714
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "open-list-title",
+                "from": "mylist",
+                "to": "detail",
+                "label": "Abrir título guardado",
+                "collectionIndex": 12,
+                "artifactIndex": 13
+              },
+              "otherRelationship": {
+                "id": "search-detail",
+                "from": "search",
+                "to": "detail",
+                "label": "Abrir resultado",
+                "collectionIndex": 21,
+                "artifactIndex": 22
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1,
+              "overlapLength": 604.8,
+              "from": [
+                765.2,
+                804
+              ],
+              "to": [
+                1370,
+                804
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "resume-title",
+                "from": "home",
+                "to": "continue",
+                "label": "Continuar viendo",
+                "collectionIndex": 16,
+                "artifactIndex": 17
+              },
+              "otherRelationship": {
+                "id": "role-admin",
+                "from": "role",
+                "to": "dashboard",
+                "label": "Permiso: administrador conceptual",
+                "collectionIndex": 17,
+                "artifactIndex": 18
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1,
+              "overlapLength": 90,
+              "from": [
+                36,
+                672
+              ],
+              "to": [
+                36,
+                762
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "resume-title",
+                "from": "home",
+                "to": "continue",
+                "label": "Continuar viendo",
+                "collectionIndex": 16,
+                "artifactIndex": 17
+              },
+              "otherRelationship": {
+                "id": "wrong-role",
+                "from": "role",
+                "to": "denied",
+                "label": "Rol sin autorización",
+                "collectionIndex": 25,
+                "artifactIndex": 26
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 2,
+              "overlapLength": 90,
+              "from": [
+                36,
+                672
+              ],
+              "to": [
+                36,
+                762
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "role-admin",
+                "from": "role",
+                "to": "dashboard",
+                "label": "Permiso: administrador conceptual",
+                "collectionIndex": 17,
+                "artifactIndex": 18
+              },
+              "otherRelationship": {
+                "id": "wrong-role",
+                "from": "role",
+                "to": "denied",
+                "label": "Rol sin autorización",
+                "collectionIndex": 25,
+                "artifactIndex": 26
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 2,
+              "overlapLength": 586,
+              "from": [
+                36,
+                424
+              ],
+              "to": [
+                36,
+                1010
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/desktop-readability",
+              "nodeId": "login",
+              "owner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "viewportWidth": 1440,
+              "viewportHeight": 900,
+              "availableDiagramWidth": 930,
+              "budgetBasis": "legacy-930",
+              "readerContract": "declared-wide-v1",
+              "requestedTargetPx": null,
+              "requestedTargetMet": null,
+              "budgetLimit": "legacy",
+              "viewBoxWidth": 1542,
+              "scale": 0.603112840466926,
+              "text": "Correo y contraseña",
+              "detail": "context",
+              "sourceFontPx": 8,
+              "projectedFontPx": 4.824902723735408,
+              "minimumProjectedFontPx": 6
+            }
+          ]
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 2279,
+      "command": [
+        "C:\\nvm4w\\nodejs\\node.exe",
+        "C:\\Users\\sayur\\.agents\\skills\\archify\\bin\\archify.mjs",
+        "check",
+        "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.html",
+        "artifact": {
+          "sha256": "10be8bf067ab2ebb8e8c908e8102559d270fc4720cdb7a597de5596805cf65ef",
+          "bytes": 794919
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": [
+              "[composition/proper-crossing] standard relationship id \"home-search\" (\"home\" -> \"search\") crosses relationship id \"resume-title\" (\"home\" -> \"continue\") at [151, 762]",
+              "[composition/proper-crossing] standard relationship id \"invalid-form\" (\"create\" -> \"formerror\") crosses relationship id \"wrong-role\" (\"role\" -> \"denied\") at [856.2, 1270]"
+            ]
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": [
+              "[composition/ambiguous-corridor] standard relationship id \"invalid-form\" (\"create\" -> \"formerror\") shares a 46px corridor with relationship id \"save-edit\" (\"edit\" -> \"publish\") at [856.2, 1142] -> [856.2, 1188]",
+              "[composition/ambiguous-corridor] standard relationship id \"manage-account\" (\"home\" -> \"account\") shares a 604.8px corridor with relationship id \"open-list-title\" (\"mylist\" -> \"detail\") at [765.2, 714] -> [1370, 714]",
+              "[composition/ambiguous-corridor] standard relationship id \"manage-account\" (\"home\" -> \"account\") shares a 592.8px corridor with relationship id \"search-detail\" (\"search\" -> \"detail\") at [777.2, 714] -> [1370, 714]",
+              "[composition/ambiguous-corridor] standard relationship id \"open-list-title\" (\"mylist\" -> \"detail\") shares a 604.8px corridor with relationship id \"search-detail\" (\"search\" -> \"detail\") at [765.2, 804] -> [1370, 804]",
+              "[composition/ambiguous-corridor] standard relationship id \"resume-title\" (\"home\" -> \"continue\") shares a 90px corridor with relationship id \"role-admin\" (\"role\" -> \"dashboard\") at [36, 672] -> [36, 762]",
+              "[composition/ambiguous-corridor] standard relationship id \"resume-title\" (\"home\" -> \"continue\") shares a 90px corridor with relationship id \"wrong-role\" (\"role\" -> \"denied\") at [36, 672] -> [36, 762]",
+              "[composition/ambiguous-corridor] standard relationship id \"role-admin\" (\"role\" -> \"dashboard\") shares a 586px corridor with relationship id \"wrong-role\" (\"role\" -> \"denied\") at [36, 424] -> [36, 1010]"
+            ]
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "standard",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 10
+          },
+          "metrics": {
+            "properCrossings": 2,
+            "resolvedCrossovers": 0,
+            "ambiguousCorridors": 7,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 6,
+            "desktopReadabilityIssues": 1,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 4.824902723735408,
+            "maxBends": 4,
+            "routesOverSuggestedBends": 8,
+            "maxStretch": 14.796,
+            "routesOverSuggestedStretch": 8,
+            "minSegmentPx": 16,
+            "minInteriorSegmentPx": 46,
+            "shortSegmentCount": 0,
+            "shortEndpointSegmentCount": 0,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [],
+            "detours": [
+              {
+                "relationship": {
+                  "id": "home-search",
+                  "from": "home",
+                  "to": "search",
+                  "label": "Buscar título",
+                  "collectionIndex": 7,
+                  "artifactIndex": 8
+                },
+                "bends": 4,
+                "stretch": 1.883
+              },
+              {
+                "relationship": {
+                  "id": "invalid-form",
+                  "from": "create",
+                  "to": "formerror",
+                  "label": "Faltan campos requeridos",
+                  "collectionIndex": 8,
+                  "artifactIndex": 9
+                },
+                "bends": 3,
+                "stretch": 1.174,
+                "directCorridorBlockers": [
+                  {
+                    "id": "edit",
+                    "label": "S19 · Edición",
+                    "box": [
+                      690.2,
+                      1116,
+                      150,
+                      52
+                    ]
+                  },
+                  {
+                    "id": "invalid",
+                    "label": "Acceso incorrecto",
+                    "box": [
+                      680.2,
+                      1286,
+                      170,
+                      52
+                    ]
+                  }
+                ]
+              },
+              {
+                "relationship": {
+                  "id": "manage-account",
+                  "from": "home",
+                  "to": "account",
+                  "label": "Ver cuenta y plan",
+                  "collectionIndex": 9,
+                  "artifactIndex": 10
+                },
+                "bends": 4,
+                "stretch": 3.209
+              },
+              {
+                "relationship": {
+                  "id": "movie-player",
+                  "from": "detail",
+                  "to": "player",
+                  "label": "Si es película · reproducir",
+                  "collectionIndex": 10,
+                  "artifactIndex": 11
+                },
+                "bends": 2,
+                "stretch": 1.977,
+                "directCorridorBlockers": [
+                  {
+                    "id": "episodes",
+                    "label": "S09 · Episodios",
+                    "box": [
+                      959,
+                      646,
+                      150,
+                      52
+                    ]
+                  }
+                ]
+              },
+              {
+                "relationship": {
+                  "id": "open-list-title",
+                  "from": "mylist",
+                  "to": "detail",
+                  "label": "Abrir título guardado",
+                  "collectionIndex": 12,
+                  "artifactIndex": 13
+                },
+                "bends": 4,
+                "stretch": 14.796
+              },
+              {
+                "relationship": {
+                  "id": "resume-title",
+                  "from": "home",
+                  "to": "continue",
+                  "label": "Continuar viendo",
+                  "collectionIndex": 16,
+                  "artifactIndex": 17
+                },
+                "bends": 2,
+                "stretch": 3.911
+              },
+              {
+                "relationship": {
+                  "id": "role-admin",
+                  "from": "role",
+                  "to": "dashboard",
+                  "label": "Permiso: administrador conceptual",
+                  "collectionIndex": 17,
+                  "artifactIndex": 18
+                },
+                "bends": 3,
+                "stretch": 1.364,
+                "directCorridorBlockers": [
+                  {
+                    "id": "continue",
+                    "label": "S12 · Continuar",
+                    "box": [
+                      167,
+                      736,
+                      150,
+                      52
+                    ]
+                  },
+                  {
+                    "id": "home",
+                    "label": "S05 · Inicio",
+                    "box": [
+                      167,
+                      646,
+                      150,
+                      52
+                    ]
+                  }
+                ]
+              },
+              {
+                "relationship": {
+                  "id": "save-edit",
+                  "from": "edit",
+                  "to": "publish",
+                  "label": "Guardar edición",
+                  "collectionIndex": 20,
+                  "artifactIndex": 21
+                },
+                "bends": 3,
+                "stretch": 1.374
+              },
+              {
+                "relationship": {
+                  "id": "search-detail",
+                  "from": "search",
+                  "to": "detail",
+                  "label": "Abrir resultado",
+                  "collectionIndex": 21,
+                  "artifactIndex": 22
+                },
+                "bends": 4,
+                "stretch": 4.284
+              },
+              {
+                "relationship": {
+                  "id": "wrong-role",
+                  "from": "role",
+                  "to": "denied",
+                  "label": "Rol sin autorización",
+                  "collectionIndex": 25,
+                  "artifactIndex": 26
+                },
+                "bends": 4,
+                "stretch": 1.231
+              }
+            ]
+          },
+          "leadingSpace": {
+            "measured": false,
+            "reviewSuggested": false
+          },
+          "desktopReadability": {
+            "budgetBasis": "legacy-930",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 930,
+            "actualBudgetPx": 930,
+            "limit": "legacy",
+            "requestedTargetPx": null,
+            "requestedTargetMet": null,
+            "hardFloorPx": 6,
+            "hardFloorMet": false,
+            "minimumOwner": {
+              "kind": "node",
+              "id": "login"
+            },
+            "minimumSourceTextPx": 8,
+            "minimumProjectedTextPx": 4.824902723735408,
+            "semanticTextCount": 74
+          },
+          "issues": [
+            {
+              "severity": "warning",
+              "code": "composition/proper-crossing",
+              "relationship": {
+                "id": "home-search",
+                "from": "home",
+                "to": "search",
+                "label": "Buscar título",
+                "collectionIndex": 7,
+                "artifactIndex": 8
+              },
+              "otherRelationship": {
+                "id": "resume-title",
+                "from": "home",
+                "to": "continue",
+                "label": "Continuar viendo",
+                "collectionIndex": 16,
+                "artifactIndex": 17
+              },
+              "point": [
+                151,
+                762
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/proper-crossing",
+              "relationship": {
+                "id": "invalid-form",
+                "from": "create",
+                "to": "formerror",
+                "label": "Faltan campos requeridos",
+                "collectionIndex": 8,
+                "artifactIndex": 9
+              },
+              "otherRelationship": {
+                "id": "wrong-role",
+                "from": "role",
+                "to": "denied",
+                "label": "Rol sin autorización",
+                "collectionIndex": 25,
+                "artifactIndex": 26
+              },
+              "point": [
+                856.2,
+                1270
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "invalid-form",
+                "from": "create",
+                "to": "formerror",
+                "label": "Faltan campos requeridos",
+                "collectionIndex": 8,
+                "artifactIndex": 9
+              },
+              "otherRelationship": {
+                "id": "save-edit",
+                "from": "edit",
+                "to": "publish",
+                "label": "Guardar edición",
+                "collectionIndex": 20,
+                "artifactIndex": 21
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1,
+              "overlapLength": 46,
+              "from": [
+                856.2,
+                1142
+              ],
+              "to": [
+                856.2,
+                1188
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "manage-account",
+                "from": "home",
+                "to": "account",
+                "label": "Ver cuenta y plan",
+                "collectionIndex": 9,
+                "artifactIndex": 10
+              },
+              "otherRelationship": {
+                "id": "open-list-title",
+                "from": "mylist",
+                "to": "detail",
+                "label": "Abrir título guardado",
+                "collectionIndex": 12,
+                "artifactIndex": 13
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 3,
+              "overlapLength": 604.8,
+              "from": [
+                765.2,
+                714
+              ],
+              "to": [
+                1370,
+                714
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "manage-account",
+                "from": "home",
+                "to": "account",
+                "label": "Ver cuenta y plan",
+                "collectionIndex": 9,
+                "artifactIndex": 10
+              },
+              "otherRelationship": {
+                "id": "search-detail",
+                "from": "search",
+                "to": "detail",
+                "label": "Abrir resultado",
+                "collectionIndex": 21,
+                "artifactIndex": 22
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 3,
+              "overlapLength": 592.8,
+              "from": [
+                777.2,
+                714
+              ],
+              "to": [
+                1370,
+                714
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "open-list-title",
+                "from": "mylist",
+                "to": "detail",
+                "label": "Abrir título guardado",
+                "collectionIndex": 12,
+                "artifactIndex": 13
+              },
+              "otherRelationship": {
+                "id": "search-detail",
+                "from": "search",
+                "to": "detail",
+                "label": "Abrir resultado",
+                "collectionIndex": 21,
+                "artifactIndex": 22
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1,
+              "overlapLength": 604.8,
+              "from": [
+                765.2,
+                804
+              ],
+              "to": [
+                1370,
+                804
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "resume-title",
+                "from": "home",
+                "to": "continue",
+                "label": "Continuar viendo",
+                "collectionIndex": 16,
+                "artifactIndex": 17
+              },
+              "otherRelationship": {
+                "id": "role-admin",
+                "from": "role",
+                "to": "dashboard",
+                "label": "Permiso: administrador conceptual",
+                "collectionIndex": 17,
+                "artifactIndex": 18
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1,
+              "overlapLength": 90,
+              "from": [
+                36,
+                672
+              ],
+              "to": [
+                36,
+                762
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "resume-title",
+                "from": "home",
+                "to": "continue",
+                "label": "Continuar viendo",
+                "collectionIndex": 16,
+                "artifactIndex": 17
+              },
+              "otherRelationship": {
+                "id": "wrong-role",
+                "from": "role",
+                "to": "denied",
+                "label": "Rol sin autorización",
+                "collectionIndex": 25,
+                "artifactIndex": 26
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 2,
+              "overlapLength": 90,
+              "from": [
+                36,
+                672
+              ],
+              "to": [
+                36,
+                762
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/ambiguous-corridor",
+              "relationship": {
+                "id": "role-admin",
+                "from": "role",
+                "to": "dashboard",
+                "label": "Permiso: administrador conceptual",
+                "collectionIndex": 17,
+                "artifactIndex": 18
+              },
+              "otherRelationship": {
+                "id": "wrong-role",
+                "from": "role",
+                "to": "denied",
+                "label": "Rol sin autorización",
+                "collectionIndex": 25,
+                "artifactIndex": 26
+              },
+              "segmentIndex": 1,
+              "otherSegmentIndex": 2,
+              "overlapLength": 586,
+              "from": [
+                36,
+                424
+              ],
+              "to": [
+                36,
+                1010
+              ]
+            },
+            {
+              "severity": "warning",
+              "code": "composition/desktop-readability",
+              "nodeId": "login",
+              "owner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "viewportWidth": 1440,
+              "viewportHeight": 900,
+              "availableDiagramWidth": 930,
+              "budgetBasis": "legacy-930",
+              "readerContract": "declared-wide-v1",
+              "requestedTargetPx": null,
+              "requestedTargetMet": null,
+              "budgetLimit": "legacy",
+              "viewBoxWidth": 1542,
+              "scale": 0.603112840466926,
+              "text": "Correo y contraseña",
+              "detail": "context",
+              "sourceFontPx": 8,
+              "projectedFontPx": 4.824902723735408,
+              "minimumProjectedFontPx": 6
+            }
+          ]
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "4ab3af0b-1f66-4934-bd52-c7dfe4e99409"
+      }
+    },
+    "browser-check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 18665,
+      "command": [
+        "C:\\nvm4w\\nodejs\\node.exe",
+        "C:\\Users\\sayur\\.agents\\skills\\archify\\bin\\archify.mjs",
+        "browser-check",
+        "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.html",
+        "--json",
+        "--require-provenance",
+        "--out-dir",
+        "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\validation-compact"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "pass",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "4ab3af0b-1f66-4934-bd52-c7dfe4e99409",
+        "artifact": {
+          "path": "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\secuencia-pantallas.html",
+          "sha256": "10be8bf067ab2ebb8e8c908e8102559d270fc4720cdb7a597de5596805cf65ef",
+          "bytes": 794919
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "available",
+          "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+        },
+        "diagnostics": [],
+        "containment": {
+          "status": "pass",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 1313,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1187,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 78,
+                "diagramChromePx": 78,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 1379,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1187,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 1379,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1187,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 1397,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1207,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 94,
+                "diagramChromePx": 94,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "themeStates": {
+          "status": "pass",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1440,
+              "height": 900,
+              "requestedTheme": "dark",
+              "resolvedTheme": "dark",
+              "ok": true
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "requestedTheme": "dark",
+              "resolvedTheme": "dark",
+              "ok": true
+            }
+          ]
+        },
+        "readability": {
+          "status": "pass",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 1313,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1187,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 78,
+                "diagramChromePx": 78,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 1379,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1187,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 1379,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1187,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 1397,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1207,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 94,
+                "diagramChromePx": 94,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "viewerChrome": {
+          "status": "pass",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 1313,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1187,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 78,
+                "diagramChromePx": 78,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 1379,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1187,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 1379,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1187,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 86,
+                "diagramChromePx": 84,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 1397,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1207,
+              "diagramWidth": 1157,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 94,
+                "diagramChromePx": 94,
+                "svgPx": 1145,
+                "cardsPx": 0,
+                "viewBoxHeight": 1526
+              },
+              "viewBoxWidth": 1542,
+              "workflowLanes": [
+                {
+                  "frameId": "lane-1",
+                  "heightPx": 338,
+                  "nodeCount": 11,
+                  "nodeIds": [
+                    "continue",
+                    "home",
+                    "browse",
+                    "profiles",
+                    "search",
+                    "account",
+                    "detail",
+                    "mylist",
+                    "episodes",
+                    "settings",
+                    "player"
+                  ],
+                  "nodeSpanPx": 174,
+                  "spaceAboveNodesPx": 161,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-0",
+                  "heightPx": 270,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "login",
+                    "role",
+                    "validation",
+                    "welcome"
+                  ],
+                  "nodeSpanPx": 242,
+                  "spaceAboveNodesPx": 26,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-2",
+                  "heightPx": 203,
+                  "nodeCount": 5,
+                  "nodeIds": [
+                    "dashboard",
+                    "contentlist",
+                    "create",
+                    "edit",
+                    "publish"
+                  ],
+                  "nodeSpanPx": 107,
+                  "spaceAboveNodesPx": 93,
+                  "spaceBelowNodesPx": 3
+                },
+                {
+                  "frameId": "lane-3",
+                  "heightPx": 158,
+                  "nodeCount": 4,
+                  "nodeIds": [
+                    "formerror",
+                    "invalid",
+                    "denied",
+                    "saved"
+                  ],
+                  "nodeSpanPx": 84,
+                  "spaceAboveNodesPx": 71,
+                  "spaceBelowNodesPx": 3
+                }
+              ],
+              "minimumProjectedNodeTextPx": 6.002594033722438,
+              "minimumProjectedNonEdgeTextPx": 6.002594033722438,
+              "minimumProjectedEdgeTextPx": 6.002594033722438,
+              "minimumProjectedNodeText": "Correo y contraseña",
+              "minimumProjectedNodeTextDetail": "context",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "node",
+                "id": "login"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "directory": "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\validation-compact",
+          "receipt": "secuencia-pantallas.browser-check.json",
+          "files": []
+        }
+      }
+    }
+  },
+  "diagnostics": [],
+  "evidence": {
+    "receipt": "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\validation-compact\\secuencia-pantallas.finalize.json",
+    "summaryReceipt": "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\validation-compact\\secuencia-pantallas.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\sayur\\PRACTICAS_INTEGRADORA_230770\\PRACTICA_06\\validation-compact\\secuencia-pantallas.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "finishedAt": "2026-10-10T15:55:06.593Z",
+  "durationMs": 36226,
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "timeout"
+  }
+}
