@@ -12,6 +12,12 @@ El módulo administrativo es **conceptual**: se propone para modelar permisos, a
 - [Galería de 20 sketches móviles](sketches-moviles.html): filtra por rol o busca una pantalla. Selecciona una tarjeta para consultar su propósito y las acciones completas que abren otras pantallas, incluidos retornos y rutas laterales.
 - [Fuente JSON de Archify](secuencia-pantallas.workflow.json): modelo editable que genera el diagrama.
 
+## Evidencia
+
+![Diagrama](diagrama.png)
+
+![Sketches](sketches.png)
+
 ## Roles y recorridos
 
 **Compartido:** S01 Bienvenida → S02 Inicio de sesión → S03 Validación → S04 Selección de perfil o rol. Las credenciales incorrectas muestran el error y regresan al formulario. Los permisos asignados deciden la ruta autorizada.
