@@ -9,8 +9,7 @@ El módulo administrativo es **conceptual**: se propone para modelar permisos, a
 ## Entregables
 
 - [Diagrama interactivo Archify](secuencia-pantallas.html): rutas principales, bifurcaciones, errores y decisiones; permite seleccionar nodos, usar las vistas guiadas para cada rol y acercar o desplazar el diagrama.
-- [Galería de 20 sketches móviles](sketches-moviles.html): filtra por rol o busca una pantalla. Selecciona una tarjeta para consultar su propósito y las acciones completas que abren otras pantallas, incluidos retornos y rutas laterales.
-- [Fuente JSON de Archify](secuencia-pantallas.workflow.json): modelo editable que genera el diagrama.
+- [Galería de 20 sketches móviles](sketches-moviles.html) · [Ver publicada en GitHub Pages](https://sayuridbc.github.io/PRACTICAS_INTEGRADORA_230770/PRACTICA_06/sketches-moviles.html): filtra por rol o busca una pantalla. Selecciona una tarjeta para consultar su propósito y las acciones completas que abren otras pantallas, incluidos retornos y rutas laterales.
 
 ## Evidencia
 
